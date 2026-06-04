@@ -53,6 +53,28 @@ What this tool does:
 - Gracefully Reboots your pc
 - Download redirects to your brand's support page for latest drivers
 
+## Building from source
+
+**Prerequisites:**
+- Windows 10/11 x64
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
+- Git
+
+**Build:**
+```
+dotnet publish AMDGPUFIX\AMDGPUFIX\AMDGPUFIX.csproj -c Release
+```
+
+The compiled `.exe` and `.dll` are in `bin\Release\net10.0-windows\win-x64\publish\`.
+
+Or double-click the one-command build script:
+```
+build-mpo-gpu-fix.bat
+```
+This builds and places `MPOGPUFIX.exe` directly on your desktop.
+
+---
+
 1. Run the tool.
 
 2. Toggle ON the fix.
