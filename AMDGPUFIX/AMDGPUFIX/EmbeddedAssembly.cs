@@ -52,7 +52,15 @@ public class EmbeddedAssembly
                 throw new Exception(embeddedResource + " is not found in Embedded Resources.");
             }
             array = new byte[(int)stream.Length];
-            stream.Read(array, 0, (int)stream.Length);
+            int offset = 0;
+            int remaining = (int)stream.Length;
+            while (remaining > 0)
+            {
+                int read = stream.Read(array, offset, remaining);
+                if (read == 0) break;
+                offset += read;
+                remaining -= read;
+            }
             try
             {
                 if (fileName == "bnscompression.dll")
@@ -69,6 +77,7 @@ public class EmbeddedAssembly
             }
             catch
             {
+                // Assembly load failure — fall through to temp file approach below
             }
         }
         bool flag = false;

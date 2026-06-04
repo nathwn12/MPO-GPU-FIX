@@ -9,14 +9,15 @@
     <StartupObject>AMDGPUFIX.Program</StartupObject>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <NoWarn>CA1416;CS8981</NoWarn>
     <Deterministic>true</Deterministic>
     <Authors>Endless</Authors>
     <Company>Endless</Company>
     <Product>MPOGPUFIX</Product>
     <Description>MPO GPU Fix Tool</Description>
     <Copyright>Copyright © 2026</Copyright>
-    <Version>8.0.0</Version>
-    <FileVersion>8.0.0.0</FileVersion>
+    <Version>8.0.1</Version>
+    <FileVersion>8.0.1.0</FileVersion>
     <PublishSingleFile>true</PublishSingleFile>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <SelfContained>false</SelfContained>

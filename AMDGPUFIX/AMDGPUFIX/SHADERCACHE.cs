@@ -4,9 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace AMDGPUFIX
 {
@@ -57,6 +54,7 @@ namespace AMDGPUFIX
             } 
             catch
             {
+                // Registry access failure — permissions or anti-ransomware blocking
                 MaterialMessageBox.Show(" Permission Denied!\r\n You are probably affected by a rootkit (virus)\r\n or User account that lacks permissions due to being managed by organisation.\r\n or Anti-Ransomware protection preventing registry access(such as Acronis True Image).\r\n Shader Cache Dropdown will be disabled to prevent any issues.");
                 return -1;
             }

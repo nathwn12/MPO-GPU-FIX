@@ -33,7 +33,10 @@ namespace AMDGPUFIX
                                     }
                         }
                 }
-                catch { }
+                catch
+                {
+                    // Registry key not found or inaccessible — skip path
+                }
             }
             return true;
         }
@@ -72,7 +75,10 @@ namespace AMDGPUFIX
                         }
                 }
             }
-            catch { }
+            catch
+            {
+                // Registry write failure — silently skip
+            }
         }
     }
 }

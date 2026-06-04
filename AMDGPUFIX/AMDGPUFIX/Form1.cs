@@ -77,7 +77,7 @@ namespace AMDGPUFIX
         {
             RegistryKey localMachine = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
             tdrLevel = localMachine.OpenSubKey("SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers", writable: true);
-            if (tdrLevel.GetValue("TdrLevel") != null)
+            if (tdrLevel != null && tdrLevel.GetValue("TdrLevel") != null)
             {
                 string val = tdrLevel.GetValue("TdrLevel").ToString();
                 if (int.TryParse(val, out int result))
@@ -126,7 +126,7 @@ namespace AMDGPUFIX
         {
             RegistryKey localMachine = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
             tdrKey = localMachine.OpenSubKey("SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers", writable: true);
-            if (tdrKey.GetValue("TdrDelay") != null)
+            if (tdrKey != null && tdrKey.GetValue("TdrDelay") != null)
             {
                 string val = tdrKey.GetValue("TdrDelay").ToString();
                 if (int.TryParse(val, out int result))
@@ -145,7 +145,7 @@ namespace AMDGPUFIX
         {
             RegistryKey localMachine = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
             overlayKey = localMachine.OpenSubKey("SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers", writable: true);
-            if (overlayKey.GetValue("DisableOverlays") != null)
+            if (overlayKey != null && overlayKey.GetValue("DisableOverlays") != null)
             {
                 string val = overlayKey.GetValue("DisableOverlays").ToString();
                 if (int.TryParse(val, out int result))
@@ -194,7 +194,7 @@ namespace AMDGPUFIX
         {
             RegistryKey localMachine = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
             defaultKey = localMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\DWM\\", writable: true);
-            if (defaultKey.GetValue("OverlayTestMode") != null)
+            if (defaultKey != null && defaultKey.GetValue("OverlayTestMode") != null)
             {
                 string val = defaultKey.GetValue("OverlayTestMode").ToString();
                 if (int.TryParse(val, out int result))
@@ -213,7 +213,7 @@ namespace AMDGPUFIX
         {
             RegistryKey localMachine = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
             minfpsKey = localMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\DWM\\", writable: true);
-            if (minfpsKey.GetValue("OverlayMinFPS") != null)
+            if (minfpsKey != null && minfpsKey.GetValue("OverlayMinFPS") != null)
             {
                 string val = minfpsKey.GetValue("OverlayMinFPS").ToString();
                 if (int.TryParse(val, out int result))
@@ -404,7 +404,7 @@ namespace AMDGPUFIX
         private void materialSwitch2_CheckedChanged(object sender, EventArgs e)
         {
             if (!Ready) return;
-            if (GPUName.Contains("9060") || GPUName.Contains("9070") && materialSwitch2.Checked)
+            if ((GPUName.Contains("9060") || GPUName.Contains("9070")) && materialSwitch2.Checked)
             {
                 MaterialMessageBox.Show("Disabling ULPS may cause system instabilities on AMD 9000 Series GPU. Monitor your system after enabling and disable if you encounter any instability.");
                 return;

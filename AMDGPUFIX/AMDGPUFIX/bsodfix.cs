@@ -129,7 +129,7 @@ namespace AMDGPUFIX
                 foreach (string _subkey in RegistryKeyMaster.OpenSubKey($"{_key}", true).GetSubKeyNames())
                 {
                     RegistryKey fullpath = RegistryKeyMaster.OpenSubKey($"{_key}\\{_subkey}");
-                    if (fullpath.GetValue("Service") != null && fullpath.GetValue("Service").ToString() == "HDAudBus" && !materialComboBox1.Items.Contains(_key))
+                    if (fullpath != null && fullpath.GetValue("Service") != null && fullpath.GetValue("Service").ToString() == "HDAudBus" && !materialComboBox1.Items.Contains(_key))
                     {
                         materialComboBox1.Items.Add(_key);
                         keyValuePairs.Add(_key, _subkey);
