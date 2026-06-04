@@ -73,7 +73,7 @@ public class EmbeddedAssembly
         }
         bool flag = false;
         string path = "";
-        using (SHA1CryptoServiceProvider sHA1CryptoServiceProvider = new SHA1CryptoServiceProvider())
+        using (SHA1 sHA1CryptoServiceProvider = SHA1.Create())
         {
             string a = BitConverter.ToString(sHA1CryptoServiceProvider.ComputeHash(array)).Replace("-", string.Empty);
             path = Path.GetTempPath() + fileName;

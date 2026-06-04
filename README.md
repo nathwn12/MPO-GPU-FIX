@@ -86,6 +86,12 @@ Feel free to donate! Any amount will help <3
 [The link is right here!](https://www.paypal.com/donate/?hosted_button_id=ZURUG4V6F6LRN)
 
 ## Changelog
+v8.0
+- Upgraded from .NET Framework 4.7.2 to .NET 10
+- Migrated to SDK-style project format
+- Removed legacy NuGet package dependencies (inbox in .NET 10)
+- Fixed deprecated SHA1CryptoServiceProvider API
+
 v7.0
 - HDAUDBUS.SYS MSI Switcher Interface added (for experienced users)
 - DX Switcher Interface added (for experienced users)
