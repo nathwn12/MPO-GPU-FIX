@@ -170,7 +170,7 @@ namespace AMDGPUFIX
 
         // Github info url
         private void materialButton3_Click(object sender, EventArgs e) =>
-            Process.Start("https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/HDAUDBUS.SYS-MSI-Support");
+            Process.Start(new ProcessStartInfo { FileName = "https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/HDAUDBUS.SYS-MSI-Support", UseShellExecute = true });
 
         // Get MFG Button
         private void materialButton4_Click(object sender, EventArgs e) =>

@@ -11,7 +11,7 @@ namespace AMDGPUFIX
         {
             if (DialogResult.OK == MaterialMessageBox.Show("WMI Has caused an error! Would you like to attempt to fix it?", "Error Detected :(", false, FlexibleMaterialForm.ButtonsPosition.Right))
             {
-                Process.Start("https://www.thewindowsclub.com/how-to-repair-or-rebuild-the-wmi-repository-on-windows-10");
+                Process.Start(new ProcessStartInfo { FileName = "https://www.thewindowsclub.com/how-to-repair-or-rebuild-the-wmi-repository-on-windows-10", UseShellExecute = true });
                 return true;
             }
             else

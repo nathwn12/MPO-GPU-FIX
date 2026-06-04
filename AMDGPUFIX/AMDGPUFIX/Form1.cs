@@ -376,7 +376,7 @@ namespace AMDGPUFIX
         // Download Latest Driver
         //
         private void materialFloatingActionButton1_Click(object sender, EventArgs e) =>
-            Process.Start(url);
+            Process.Start(new ProcessStartInfo { FileName = url, UseShellExecute = true });
         //
         // End
         //
@@ -566,7 +566,7 @@ namespace AMDGPUFIX
         // ULPS Info Button
         //
         private void materialButton1_Click(object sender, EventArgs e) =>
-            Process.Start("https://github.com/RedDot-3ND7355/AMD-GPU-FIX/wiki/ULPS");
+            Process.Start(new ProcessStartInfo { FileName = "https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/ULPS", UseShellExecute = true });
         //
         // End
         //
@@ -575,7 +575,7 @@ namespace AMDGPUFIX
         // MPO Info Button
         //
         private void materialButton2_Click(object sender, EventArgs e) =>
-            Process.Start("https://github.com/RedDot-3ND7355/AMD-GPU-FIX/wiki/MPO");
+            Process.Start(new ProcessStartInfo { FileName = "https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/MPO", UseShellExecute = true });
         //
         // End
         //
@@ -593,7 +593,7 @@ namespace AMDGPUFIX
         // TDR Info Button
         //
         private void materialButton3_Click(object sender, EventArgs e) =>
-            Process.Start("https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/TDR");
+            Process.Start(new ProcessStartInfo { FileName = "https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/TDR", UseShellExecute = true });
         //
         // End
         //
@@ -602,7 +602,7 @@ namespace AMDGPUFIX
         // HAGS Info Button
         //
         private void materialButton4_Click(object sender, EventArgs e) =>
-            Process.Start("https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/HAGS");
+            Process.Start(new ProcessStartInfo { FileName = "https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/HAGS", UseShellExecute = true });
         //
         // End
         //
@@ -611,7 +611,7 @@ namespace AMDGPUFIX
         // SHADER CACHE Info Button
         //
         private void materialButton5_Click(object sender, EventArgs e) =>
-            Process.Start("https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/SHADER-CACHE-(AMD)");
+            Process.Start(new ProcessStartInfo { FileName = "https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/SHADER-CACHE-(AMD)", UseShellExecute = true });
         //
         // End
         //
@@ -620,7 +620,7 @@ namespace AMDGPUFIX
         // DONATE Button
         //
         private void materialButton6_Click(object sender, EventArgs e) =>
-            Process.Start("https://www.paypal.com/donate/?hosted_button_id=ZURUG4V6F6LRN");
+            Process.Start(new ProcessStartInfo { FileName = "https://www.paypal.com/donate/?hosted_button_id=ZURUG4V6F6LRN", UseShellExecute = true });
         //
         // End
         //
@@ -629,7 +629,7 @@ namespace AMDGPUFIX
         // TDR Level Info Button
         //
         private void materialButton7_Click(object sender, EventArgs e) =>
-            Process.Start("https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/TDRLevel");
+            Process.Start(new ProcessStartInfo { FileName = "https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/TDRLevel", UseShellExecute = true });
         //
         // End
         //
@@ -639,7 +639,7 @@ namespace AMDGPUFIX
         //
         private void materialButton11_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/Disable-Overlays");
+            Process.Start(new ProcessStartInfo { FileName = "https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/Disable-Overlays", UseShellExecute = true });
         }
         //
         // End
@@ -650,7 +650,7 @@ namespace AMDGPUFIX
         //
         private void materialButton10_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/OverlayMinFPS");
+            Process.Start(new ProcessStartInfo { FileName = "https://github.com/RedDot-3ND7355/MPO-GPU-FIX/wiki/OverlayMinFPS", UseShellExecute = true });
         }
         //
         // End
